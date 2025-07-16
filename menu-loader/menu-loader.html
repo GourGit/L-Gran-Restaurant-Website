@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'Gran | Loading Menu</title>
+
+  <link rel="icon" type="image/png" href="image/logo.png">
+
+  <style>
+    body {
+      margin: 0;
+      background: #1c1c1c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+      color: #ffc901;
+      font-family: 'Atma', cursive;
+      transition: opacity 0.6s ease-out;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .cube {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 1.5s infinite linear;
+      margin-bottom: 20px;
+    }
+
+    .cube div {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: #171817;
+      border: 2px solid #fff;
+      background-image: url('./image/logo.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .front  { transform: translateZ(40px); }
+    .back   { transform: rotateY(180deg) translateZ(40px); }
+    .right  { transform: rotateY(90deg) translateZ(40px); }
+    .left   { transform: rotateY(-90deg) translateZ(40px); }
+    .top    { transform: rotateX(90deg) translateZ(40px); }
+    .bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+    @keyframes rotateCube {
+      0% { transform: rotateX(0deg) rotateY(0deg); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    .loading-text {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cube">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="right"></div>
+    <div class="left"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+
+  <div class="loading-text">Loading L'Gran Menu...</div>
+
+  <script>
+    setTimeout(() => {
+      document.body.classList.add("fade-out");
+      setTimeout(() => {
+        window.location.href = '../menu/menu.html';
+      }, 600);
+    }, 1500);
+  </script>
+
+</body>
+</html>

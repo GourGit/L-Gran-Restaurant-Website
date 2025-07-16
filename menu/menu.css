@@ -1,0 +1,146 @@
+body {
+    font-family: 'Atma', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfaf6;
+    color: #333;
+}
+
+header {
+    background-color: #1c1c1c;
+    color: #ffc901;
+    padding: 60px 20px 50px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ffdd00;
+    margin-top: 10px;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffc901;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+}
+
+.menu-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.menu-heading h1 {
+    font-size: 3.5rem;
+    color: #ffc901;
+    margin: 0;
+}
+
+.decor-img {
+    width: 80px;
+    height: auto;
+    object-fit: contain;
+}
+
+.decor-img.flipped {
+    transform: scaleX(-1);
+    /* Flip the right image */
+}
+
+
+
+.menu-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.category {
+    margin-bottom: 50px;
+}
+
+.category h2 {
+    border-bottom: 2px solid #ffc901;
+    padding-bottom: 12px;
+    color: #c0392b;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px dashed #ccc;
+    padding: 14px 0;
+    flex-wrap: wrap;
+}
+
+.menu-item .details {
+    max-width: 75%;
+}
+
+.menu-item .details strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #1c1c1c;
+}
+
+.menu-item .details p {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.menu-item .price {
+    font-weight: bold;
+    color: #c0392b;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-images img {
+        width: 45px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item .details {
+        max-width: 100%;
+    }
+
+    .menu-item .price {
+        margin-top: 6px;
+    }
+}
