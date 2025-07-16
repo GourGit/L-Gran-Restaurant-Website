@@ -99,7 +99,6 @@ html {
 
 .right {
     flex: 1;
-    /* width: 750px; */
     min-height: 70vh;
     padding: 70px 0;
     display: flex;
@@ -299,7 +298,6 @@ a {
     align-items: flex-start;
     justify-content: center;
     gap: 2rem;
-    /* 👈 Adds space between the columns */
     margin-bottom: 150px;
 }
 
@@ -307,7 +305,6 @@ a {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    /* 👈 Adds space between the images (rows) */
 }
 
 .gallery-images img {
@@ -395,9 +392,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 5px;
     appearance: none;
-    /* Removes default dropdown arrow */
     -webkit-appearance: none;
-    /* For Safari */
     background-color: transparent;
     outline: none;
     cursor: pointer;
@@ -445,7 +440,6 @@ select option {
 
 #confirmationMessage {
     display: none;
-    /* hidden by default */
     background-color: rgba(0, 0, 0, 0.7);
     border-left: 4px solid #ffc901;
     color: #ffc901;
